@@ -1,35 +1,218 @@
-/* --- STYLESHEET --- */
-* { 
-	box-sizing: border-box;
-}
+/* stylesheet.css */
+
+* {
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+  }
+
+  
+
 html, body {
 	min-height: 100%;
+    background-color: #1f2937;
+
 	background: #fff;
 	color: #000;
+    margin: 0%;
 }
 	/* sets the body height of the browser, so that backgrounds and div heights work correctly. Color and background will almost certainly be altered; they are just placeholders */
 	
 body {
+    
+    font-family: "roboto", Arial, Helvetica, sans-serif;
 	font-size: 1.4rem;
 	text-rendering: optimizeLegibility;
 }
-	/* sets the base font size for the document; turns on kerning pairs and ligatures */
 	
-body, ul, ol, dl {
-	margin: 0;
-}
+
 article, aside, audio, 
 footer, header, nav, section, video {
 	display: block; 
 	}
-	
-	/* ensures that older browsers will display HTML5 elements correctly */
-	
-h1 {
-	font-size: 1.4rem;
+
+    .top-row, .hero-section {
+        background-color: #1f2937;
+    }
+
+.top-row {
+    display: flex;
+    padding-left: 8%;
+    padding-right: 8%;
 }
-	/* begins to set up font sizes relative to base rem – h1 has been used as an example */
-	
+
+.header-logo img {
+    max-width: 250px;
+    height: 100%;
+    text-align: center;
+    flex: 1 ;
+}
+
+.header-menu {
+    text-align: right;
+    padding: 15px;
+    flex: 1 ;
+}
+
+
+.header-menu button {
+    width: 150px;
+    background-color: #000000;
+    color: white;
+    padding: 1%
+}
+
+.signup-button button {
+    width: 150px;
+    background-color: #3882f6;
+    font-weight: bold;
+    font-size: large;
+    border-radius: 8px;
+    color: white;
+    padding: 2%
+}
+
+
+
+.hero-section {
+    display: flex;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-bottom: 5%;
+}
+
+.hero-left {
+   padding: 20px;
+    /* text-align: center; */
+    flex: 1 ;
+}
+
+.hero-right {
+    text-align: center;
+    min-width: 200px;
+    flex: 1 ;
+}
+
+.hero-image .himg{
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    
+    
+  }
+.headline {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f9faf8;
+}
+
+.headline-subtext {
+    font-size: 18px;
+    color: #E5E7EB;
+}
+
+
+.subheading {
+    text-align: center;
+}
+
+
+.info-section {
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.info-images img {
+        border: 4px solid #388ef6;
+        border-radius: 15px;
+        width: 150px;
+        height: 150px;
+}
+
+.info-images {    
+    height:180px;
+    width: 180px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+.rt {
+    text-align: right;
+}
+
+.big-quote {
+    background-color: #E5E7EB ;
+    padding-left: 22%;
+    padding-right: 22%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 2.25rem;
+}
+
+.big-quote .rt {
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: bold;
+}
+
+
+.cta-section {
+    display: flex;
+    margin: 5%;
+    margin-left: 12%;
+    margin-right: 12%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    border-radius: 15px;
+    background-color: #3882f6;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.cta-title {
+    flex: 1;
+}
+
+.cta-subtext {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.cta-button {
+    align-self: center; 
+}
+
+.cta-but {
+    width: 150px;
+    color: #fff;
+    background-color: #3882f6;
+    border-color: #fff;
+    border-width: 2px;
+    font-weight: bold;
+    font-size: large;
+    border-radius: 8px;
+    padding: 5%
+}
+
+.footer-section {
+    background-color: #1f2937;
+    padding: 1.5%;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+
 p { 
 	-ms-word-break: break-all;
 	word-break: break-all;
@@ -52,12 +235,7 @@ td {
 }
 	/* causes tables to actually look like tables */
 	
-img { 
-	border: none;
-	max-width: 100%;
-}
-	/* removes outlines from linked images (for older browsers and IE), sets up images for responsive design layout */
-	
+
 input[type="submit"]::-moz-focus-inner, 
 	input[type="button"]::-moz-focus-inner {
 		border : 0px;
@@ -77,12 +255,13 @@ input:required:after {
 	content: " *";
 }
 	/* sets up required form fields with the conventional following red asterix */
-    
+
 input[type="email"]:invalid { 
 	background: #f00;
 }
 	/* causes a visual alert in browsers that do client-side checking of HTML5 email field – this may already be the default in some browsers. */
 	
+/* 
 .right { 
 	float: right;
 	margin-left: 2rem;
@@ -93,9 +272,5 @@ input[type="email"]:invalid {
 	margin-right: 2rem;
 	clear: left;
 }
-	/* allows a quick shortcut for floating elements left and right while avoiding the “float quirk” problem */
-	
-sub, sup { 
-	line-height: 0;
-}
-    /* sets superscript and subscript text so that it doesn't throw off leading for elements in which they are included */
+ allows a quick shortcut for floating elements left and right while avoiding the “float quirk” problem 
+ */
